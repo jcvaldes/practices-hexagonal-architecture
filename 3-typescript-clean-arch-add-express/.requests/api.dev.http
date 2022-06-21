@@ -1,0 +1,9 @@
+### Create route
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+  "title": "mi ruta",
+  "startPosition": { "lat": 1, "lng": 2 },
+  "endPosition": { "lat": 3, "lng": 4 }
+}

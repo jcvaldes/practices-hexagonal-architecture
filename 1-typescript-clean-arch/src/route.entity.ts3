@@ -1,0 +1,17 @@
+export type LatLng = { lat: number; lng: number }
+
+export class Route {
+  constructor(
+    public title: string,
+    public startPosition: LatLng,
+    public endPosition: LatLng,
+    public points: LatLng
+  ) {}
+}
+
+const route = new Route(
+  'mi ruta',
+  { lat: 23, lng: 33 },
+  { lat: 23, lng: 33 },
+  { lat: 23, lng: 33 }
+)

@@ -1,0 +1,19 @@
+type LatLng = { lat: number; lng: number }
+
+class Route {
+  title: string
+  startPosition: LatLng
+  endPosition: LatLng
+  points: LatLng[]
+  constructor(
+    title: string,
+    startPosition: LatLng,
+    endPosition: LatLng,
+    points: LatLng[]
+  ) {
+    this.title = title
+    this.startPosition = startPosition
+    this.endPosition = endPosition
+    this.points = points
+  }
+}

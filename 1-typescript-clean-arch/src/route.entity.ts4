@@ -1,0 +1,28 @@
+export type LatLng = { lat: number; lng: number }
+
+export type RouteProps = {
+  title: string
+  startPosition: LatLng
+  endPosition: LatLng
+  points: LatLng[]
+}
+export class Route {
+  constructor(public props: RouteProps) {}
+
+  private set title(value: string) {
+    this.props.title = value
+  }
+}
+
+const route = new Route({
+  title: 'mi ruta',
+  startPosition: { lat: 23, lng: 33 },
+  endPosition: { lat: 23, lng: 33 },
+  points: [{ lat: 23, lng: 33 }]
+})
+
+// route.props.title = "otra ruta"
+// los setters publicos es el primer error en arq de software
+// es empezar a trabajar orientado a frameworks, ORM, lib de persistencia
+// tienden a ser entidades anemicas sin reglas de negocio
+route.title = 'mi ruta'
